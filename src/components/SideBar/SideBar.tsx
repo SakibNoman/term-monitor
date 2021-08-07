@@ -3,33 +3,33 @@ import React from "react";
 const sideBarInfo = [
   {
     id: 1,
-    icon: "",
+    icon: "../../images/Home.svg",
     title: "Add keywords",
   },
   {
     id: 2,
-    icon: "",
+    icon: "../../images/social.svg",
     title: "Matches",
   },
   {
     id: 3,
-    icon: "",
+    icon: "../../images/tab.svg",
     title: "Manage sources",
   },
   {
     id: 4,
-    icon: "",
+    icon: "../../images/tab.svg",
     title: "Integration",
   },
   {
     id: 5,
-    icon: "",
+    icon: "../../images/tab.svg",
     title: "Alerts",
   },
 ];
 
 const SideBar = () => {
-  return <></>;
+  return <div></div>;
 };
 
 export default SideBar;
