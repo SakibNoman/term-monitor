@@ -1,0 +1,18 @@
+.SideBarDiv div {
+  display: flex;
+  align-content: center;
+  padding: 0 10px;
+  color: dimgray;
+  cursor: pointer;
+}
+
+.SideBarDiv div:hover,
+.active {
+  background-color: #3f0e40;
+  color: white;
+  padding: 0 10px;
+}
+
+.SideBarDiv div p:nth-child(2) {
+  margin-left: 25px;
+}

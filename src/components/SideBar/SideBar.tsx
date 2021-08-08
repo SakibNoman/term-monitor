@@ -1,41 +1,46 @@
-import { faCoffee } from "@fortawesome/free-solid-svg-icons";
+import {
+  faHome,
+  faNewspaper,
+  faUserFriends,
+} from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
-import SideBarItem from "./SideBarItem";
-
-const sideBarInfo = [
-  {
-    id: 1,
-    icon: faCoffee,
-    title: "Add keywords",
-  },
-  {
-    id: 2,
-    icon: faCoffee,
-    title: "Matches",
-  },
-  {
-    id: 3,
-    icon: faCoffee,
-    title: "Manage sources",
-  },
-  {
-    id: 4,
-    icon: faCoffee,
-    title: "Integration",
-  },
-  {
-    id: 5,
-    icon: faCoffee,
-    title: "Alerts",
-  },
-];
+import "./sideBar.css";
 
 const SideBar = () => {
   return (
-    <div>
-      {sideBarInfo.map((each) => (
-        <SideBarItem key={each.id} icon={each.icon} title={each.title} />
-      ))}
+    <div className="SideBarDiv">
+      <div>
+        <p>
+          <FontAwesomeIcon icon={faHome}></FontAwesomeIcon>
+        </p>
+        <p>Add Keywords</p>
+      </div>
+
+      <div>
+        <p>
+          <FontAwesomeIcon icon={faUserFriends}></FontAwesomeIcon>
+        </p>
+        <p>Matches</p>
+      </div>
+      <div>
+        <p>
+          <FontAwesomeIcon icon={faNewspaper}></FontAwesomeIcon>
+        </p>
+        <p>Manage sources</p>
+      </div>
+      <div>
+        <p>
+          <FontAwesomeIcon icon={faNewspaper}></FontAwesomeIcon>
+        </p>
+        <p>Integration</p>
+      </div>
+      <div>
+        <p>
+          <FontAwesomeIcon icon={faNewspaper}></FontAwesomeIcon>
+        </p>
+        <p>Alerts</p>
+      </div>
     </div>
   );
 };

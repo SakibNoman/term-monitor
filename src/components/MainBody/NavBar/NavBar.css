@@ -1,0 +1,47 @@
+.NavBarDiv {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 40px;
+  color: white;
+  background-color: #3f0e40;
+  align-items: center;
+}
+
+.SearchArea {
+  display: flex;
+  align-items: center;
+}
+
+.SearchArea div {
+  margin-left: 15px;
+}
+
+.SearchArea button:nth-child(1) {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+}
+
+.SearchBox {
+  position: relative;
+}
+
+.SearchBox input {
+  width: 300px;
+  height: 30px;
+  border-radius: 8px;
+  color: #3f0e40;
+  padding: 0 70px 0 10px;
+  font-size: 16px;
+}
+.SearchBox input:focus {
+  outline: none;
+}
+
+.SearchBox button {
+  position: absolute;
+  left: 80%;
+  top: 25%;
+  background-color: transparent;
+  border: 0;
+}
