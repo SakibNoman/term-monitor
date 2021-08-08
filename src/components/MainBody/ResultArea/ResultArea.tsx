@@ -43,6 +43,7 @@ const ResultArea = () => {
             </tr>
           </thead>
           <tbody>
+            <div className={tableData.length === 0 ? "loader" : ""}></div>
             {tableData.map((each) => (
               <tr>
                 <td className="keywordCell">

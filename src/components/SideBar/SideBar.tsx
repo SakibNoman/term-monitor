@@ -6,37 +6,51 @@ import {
   faUserFriends,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React from "react";
+import React, { useState } from "react";
 import "./sideBar.css";
 
 const navInfo = [
   {
+    id: 0,
     title: "Add keywords",
     icon: faHome,
   },
   {
+    id: 1,
     title: "Matches",
     icon: faUserFriends,
   },
   {
+    id: 2,
     title: "Manage sources",
     icon: faNewspaper,
   },
   {
+    id: 3,
     title: "Integration",
     icon: faNewspaper,
   },
   {
+    id: 4,
     title: "Alerts",
     icon: faNewspaper,
   },
 ];
 
 const SideBar = () => {
+  const [activeNav, setActiveNav] = useState(0);
+
+  const handleClick = (id: number) => {
+    setActiveNav(id);
+  };
+
   return (
     <div className="SideBarDiv">
       {navInfo.map((each) => (
-        <div>
+        <div
+          onClick={() => handleClick(each.id)}
+          className={activeNav === each.id ? "active" : ""}
+        >
           <p>
             <FontAwesomeIcon icon={each.icon} />
           </p>
