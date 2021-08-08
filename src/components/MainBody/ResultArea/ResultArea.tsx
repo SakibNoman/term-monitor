@@ -35,7 +35,7 @@ const ResultArea = () => {
           <thead>
             <tr>
               <th>Keywords</th>
-              <th></th>
+              <th> </th>
               <th>Goal</th>
               <th>Matches</th>
               <th>Search Status</th>

@@ -20,6 +20,9 @@
   height: 30px;
   width: 30px;
   border-radius: 50%;
+  background-color: white;
+  border: 0;
+  color: #3f0e40;
 }
 
 .SearchBox {
@@ -44,4 +47,8 @@
   top: 25%;
   background-color: transparent;
   border: 0;
+  color: #3f0e40;
+}
+.NavBarDiv h2 {
+  font-weight: 500;
 }
