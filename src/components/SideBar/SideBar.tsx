@@ -1,46 +1,58 @@
 import {
   faHome,
   faNewspaper,
+  faSortDown,
+  faStar,
   faUserFriends,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import "./sideBar.css";
 
+const navInfo = [
+  {
+    title: "Add keywords",
+    icon: faHome,
+  },
+  {
+    title: "Matches",
+    icon: faUserFriends,
+  },
+  {
+    title: "Manage sources",
+    icon: faNewspaper,
+  },
+  {
+    title: "Integration",
+    icon: faNewspaper,
+  },
+  {
+    title: "Alerts",
+    icon: faNewspaper,
+  },
+];
+
 const SideBar = () => {
   return (
     <div className="SideBarDiv">
-      <div>
+      {navInfo.map((each) => (
+        <div>
+          <p>
+            <FontAwesomeIcon icon={each.icon} />
+          </p>
+          <p>{each.title}</p>
+        </div>
+      ))}
+      <div className="SettingDiv">
         <p>
-          <FontAwesomeIcon icon={faHome}></FontAwesomeIcon>
+          <FontAwesomeIcon icon={faStar} />
         </p>
-        <p>Add Keywords</p>
-      </div>
-
-      <div>
+        <p className="SettingHeader"> Settings </p>
         <p>
-          <FontAwesomeIcon icon={faUserFriends}></FontAwesomeIcon>
+          <FontAwesomeIcon icon={faSortDown} />
         </p>
-        <p>Matches</p>
       </div>
-      <div>
-        <p>
-          <FontAwesomeIcon icon={faNewspaper}></FontAwesomeIcon>
-        </p>
-        <p>Manage sources</p>
-      </div>
-      <div>
-        <p>
-          <FontAwesomeIcon icon={faNewspaper}></FontAwesomeIcon>
-        </p>
-        <p>Integration</p>
-      </div>
-      <div>
-        <p>
-          <FontAwesomeIcon icon={faNewspaper}></FontAwesomeIcon>
-        </p>
-        <p>Alerts</p>
-      </div>
+      <p className="billing">Billings</p>
     </div>
   );
 };

@@ -4,6 +4,7 @@
   padding: 0 10px;
   color: dimgray;
   cursor: pointer;
+  font-size: 14px;
 }
 
 .SideBarDiv div:hover,
@@ -12,7 +13,27 @@
   color: white;
   padding: 0 10px;
 }
+.SideBarDiv div:hover .SettingHeader {
+  color: white;
+}
 
 .SideBarDiv div p:nth-child(2) {
+  margin-left: 25px;
+}
+.SettingDiv {
+  display: flex;
+  margin-top: 10px;
+}
+.SettingDiv p:nth-child(3) {
+  margin-left: 50px;
+}
+
+.SettingHeader {
+  color: black;
+  font-size: 16px;
+}
+
+.billing {
+  color: dimgray;
   margin-left: 25px;
 }

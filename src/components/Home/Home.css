@@ -10,6 +10,26 @@
 
 .mainBody {
   background-color: #e5e5e5;
-  height: 100vh;
   width: 85%;
+}
+
+.profileBadge {
+  display: flex;
+  height: 72px;
+  align-items: center;
+  justify-content: center;
+}
+.profileBadge h1 {
+  font-size: 20px;
+  font-weight: 400;
+  color: #3f0e40;
+}
+
+.profileBadge span {
+  font-weight: 600;
+}
+
+.profileBadge img {
+  height: 50px;
+  width: 50px;
 }

@@ -1,3 +1,5 @@
+import { faSearch, faTrash } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useEffect, useState } from "react";
 import "./ResultArea.css";
 
@@ -33,6 +35,7 @@ const ResultArea = () => {
           <thead>
             <tr>
               <th>Keywords</th>
+              <th></th>
               <th>Goal</th>
               <th>Matches</th>
               <th>Search Status</th>
@@ -42,10 +45,17 @@ const ResultArea = () => {
           <tbody>
             {tableData.map((each) => (
               <tr>
-                {" "}
-                <td> {each.keyword} </td> <td> {each.goal} </td>{" "}
-                <td> {each.matches} </td> <td> {each.search_status} </td>{" "}
-                <td> d </td>{" "}
+                <td className="keywordCell">
+                  <p>{each.keyword}</p>
+                </td>
+                <td>
+                  <FontAwesomeIcon icon={faSearch}></FontAwesomeIcon>
+                </td>
+                <td> {each.goal} </td>
+                <td> {each.matches} </td> <td> {each.search_status} </td>
+                <td>
+                  <FontAwesomeIcon icon={faTrash}></FontAwesomeIcon>
+                </td>
               </tr>
             ))}
           </tbody>
