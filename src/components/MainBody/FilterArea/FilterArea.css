@@ -1,5 +1,6 @@
 .filterDiv {
   margin: 0 50px;
+  height: 140px;
 }
 .ActionDiv {
   display: flex;
@@ -34,7 +35,15 @@
   padding: 0px 150px 0 50px;
   font-size: 18px;
   border: 0;
+  border-radius: 4px;
+  transition: box-shadow 200ms;
 }
+
+.SearchDiv input:focus {
+  outline: none;
+  box-shadow: 0 10px 10px -5px gray;
+}
+
 .SearchDiv button {
   right: 1%;
   top: 20px;

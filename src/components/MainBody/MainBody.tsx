@@ -2,6 +2,7 @@ import React from "react";
 import FilterArea from "./FilterArea/FilterArea";
 import "./MainBody.css";
 import NavBar from "./NavBar/NavBar";
+import ResultArea from "./ResultArea/ResultArea";
 
 const MainBody = () => {
   return (
@@ -12,7 +13,9 @@ const MainBody = () => {
       <div>
         <FilterArea></FilterArea>
       </div>
-      <div></div>
+      <div>
+        <ResultArea></ResultArea>
+      </div>
     </div>
   );
 };
