@@ -6,6 +6,7 @@ import "./FilterArea.css";
 const FilterArea = () => {
   return (
     <div className="filterDiv">
+      {/* Filter area heading part */}
       <div className="ActionDiv">
         <div>
           <h4> Add Another keyword </h4>
@@ -16,6 +17,8 @@ const FilterArea = () => {
           <p>Advance search</p>
         </div>
       </div>
+
+      {/* Filter area input box part */}
       <div className="SearchDiv">
         <FontAwesomeIcon icon={faSearch}></FontAwesomeIcon>
         <input type="text" placeholder="Enter your filters here" />

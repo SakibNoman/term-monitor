@@ -9,6 +9,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useState } from "react";
 import "./sideBar.css";
 
+// Various types of information on navigation
 const navInfo = [
   {
     id: 0,
@@ -38,14 +39,17 @@ const navInfo = [
 ];
 
 const SideBar = () => {
+  //useState hook to detect active nav item
   const [activeNav, setActiveNav] = useState(0);
 
+  //function to change active class of nav bar
   const handleClick = (id: number) => {
     setActiveNav(id);
   };
 
   return (
     <div className="SideBarDiv">
+      {/* array mapping and nav building of similar look item */}
       {navInfo.map((each) => (
         <div
           onClick={() => handleClick(each.id)}
@@ -57,6 +61,8 @@ const SideBar = () => {
           <p>{each.title}</p>
         </div>
       ))}
+
+      {/* some independent nav item */}
       <div className="SettingDiv">
         <p>
           <FontAwesomeIcon icon={faStar} />

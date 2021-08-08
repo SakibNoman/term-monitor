@@ -12,8 +12,10 @@ interface IData {
 }
 
 const ResultArea = () => {
+  // useState hook to keep table data
   const [tableData, setTableData] = useState<IData[]>([]);
 
+  //useEffect hook to fetch data by calling api and keeping data in state
   useEffect(() => {
     fetch(
       "https://raw.githubusercontent.com/akshita151199/Termmonitor-APIs/main/dashboard"
@@ -22,16 +24,16 @@ const ResultArea = () => {
       .then((data) => setTableData(data.data));
   }, []);
 
-  //   console.log(tableData);
-
   return (
     <div className="resultAreaContainer">
+      {/* heading result area */}
       <div className="tableHeading">
         <h3>The terms you are tracking</h3>
         <p>The data will refresh every 5 minutes</p>
       </div>
       <div>
         <table>
+          {/* table heading */}
           <thead>
             <tr>
               <th>Keywords</th>
@@ -42,8 +44,13 @@ const ResultArea = () => {
               <th>Delete keyword</th>
             </tr>
           </thead>
+
+          {/* table body part */}
           <tbody>
+            {/* loader will show at loading time */}
             <div className={tableData.length === 0 ? "loader" : ""}></div>
+
+            {/* mapping through table data array */}
             {tableData.map((each) => (
               <tr>
                 <td className="keywordCell">
