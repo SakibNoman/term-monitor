@@ -1,14 +1,17 @@
 import React from "react";
+import FilterArea from "./FilterArea/FilterArea";
 import "./MainBody.css";
 import NavBar from "./NavBar/NavBar";
 
 const MainBody = () => {
   return (
-    <div>
+    <div className="Main-Body">
       <div>
         <NavBar></NavBar>
       </div>
-      <div></div>
+      <div>
+        <FilterArea></FilterArea>
+      </div>
       <div></div>
     </div>
   );

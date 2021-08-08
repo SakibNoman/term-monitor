@@ -1,0 +1,55 @@
+.filterDiv {
+  margin: 0 50px;
+}
+.ActionDiv {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.ActionDiv > Div {
+  display: flex;
+  align-items: center;
+}
+.ActionDiv > Div p {
+  margin-left: 15px;
+}
+.ActionDiv > Div p:nth-child(2) {
+  background-color: #3f0e40;
+  color: white;
+  padding: 1px 12px;
+}
+
+.SearchDiv {
+  position: relative;
+}
+.SearchDiv svg,
+.SearchDiv button,
+.SearchDiv input {
+  position: absolute;
+}
+.SearchDiv input {
+  width: 81%;
+  height: 70px;
+  padding: 0px 150px 0 50px;
+  font-size: 18px;
+  border: 0;
+}
+.SearchDiv button {
+  right: 1%;
+  top: 20px;
+  background-color: #3f0e40;
+  color: white;
+  text-transform: uppercase;
+  width: 130px;
+  height: 35px;
+  border-radius: 8px;
+  border: 0;
+}
+
+.SearchDiv svg {
+  z-index: 11;
+  top: 30px;
+  left: 2%;
+  color: dimgray;
+}
